@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat&family=Inter:wght@400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+:root {
+	--bg-color-1: hsl(60deg 23% 95%);
+	--bg-color-2: hsl(238deg 60% 96%);
+	--text-color: hsl(222deg 29% 24%);
+	--shadow-color: 60deg 8% 68%;
+	--shadow: 0.2px 0.5px 0.5px hsl(var(--shadow-color) / 0.41),
+		0.4px 1px 1px -1.3px hsl(var(--shadow-color) / 0.33),
+		1.3px 3.1px 3px -2.7px hsl(var(--shadow-color) / 0.26),
+		3.5px 8.3px 8.1px -4px hsl(var(--shadow-color) / 0.18);
+}
+
+body {
+	font-family: "Chelsea Market", sans-serif;
+	font-size: clamp(1.125rem, 2vw, 1.25rem);
+	color: var(--text-color);
+	background-image: linear-gradient(
+		to bottom,
+		var(--bg-color-1),
+		var(--bg-color-2)
+	);
+	overflow-x: hidden;
+}
+
+.history {
+	z-index: 0;
+	animation: fadeInAp 0.9s ease-out forwards;
+
+}
+
+article {
+	--photo-margin: clamp(1rem, 6vw, 2rem);
+	inline-size: min(65ch, 100% - 4rem);
+	margin-inline: auto;
+	margin-block-end: 30vh;
+}
+
+p {
+	margin-block: 2.5rem;
+	letter-spacing: -0.025em;
+	line-height: 1.75em;
+}
+
+h2 {
+    text-align: center;
+    margin: 30px;
+}
+.contact-info h3 {
+    color: #000;
+}
+
+.contact-info p {
+    color: #000;
+    margin: 5px;
+}
+
+figure {
+	position: relative;
+	display: grid;
+	grid-template-areas:
+		"photo"
+		"caption";
+	gap: 0.5rem;
+	margin-inline: auto;
+	border: 1rem solid white;
+	width: min(250px, 100%);
+	background-color: white;
+	box-shadow: var(--shadow);
+	rotate: var(--rotate, -3deg);
+	border-radius: 0.125rem;
+}
+
+figure:nth-of-type(even) {
+	direction: rtl;
+	--float: right;
+	--rotate: 2deg;
+	--offset: 0.5rem;
+}
+
+figure div {
+	overflow: hidden;
+	aspect-ratio: 1;
+	background-color: black;
+	border-radius: inherit;
+}
+
+img {
+	position: relative;
+	width: 100%;
+	object-fit: cover;
+	vertical-align: bottom;
+}
+
+figcaption {
+	display: grid;
+	place-content: start end;
+	height: 3.5rem;
+	font-family: "Caveat", cursive;
+	line-height: 1;
+}
+@media (min-width: 600px) {
+	figure {
+		clear: both;
+		float: var(--float, left);
+		margin-inline: 0 var(--photo-margin);
+		margin-block-end: var(--photo-margin);
+		translate: var(--offset, -0.5rem) 0;
+	}
+
+	.shuffle-photos {
+		float: right;
+		max-width: 300px;
+		margin-inline: var(--photo-margin) 0;
+		margin-block-end: var(--photo-margin);
+	}
+}
+
+figure {
+	view-timeline-name: --photo;
+}
+
+header {
+	animation: auto linear title both;
+	animation-timeline: view();
+	animation-range: exit 10% cover 80%;
+}
+
+.develop-photo {
+	animation: auto linear develop both;
+	animation-timeline: --photo;
+	animation-range: entry 30% cover 40%;
+}
+
+@keyframes title {
+	to {
+		opacity: 0;
+		translate: 0 10%;
+	}
+}
+
+@keyframes fadeInAp {
+	0% {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+

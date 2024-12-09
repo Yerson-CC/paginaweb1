@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Schoolbell&display=swap');
+
+/* imagen y texto section2*/
+
+.contenido-principal__imagen {
+	vertical-align: top;
+	margin-right: 20px;
+	width: 50%;
+	max-width: 550px;
+  border-radius: 20px;
+  box-shadow: 0 7px 20px 3px rgba(63, 62, 63, 0.73);
+}
+
+.contenido-principal__contenedor {
+	width: 50%;
+}
+
+.contenido-principal__titulo {
+  font-family: 'Chelsea Market';
+	font-weight: lighter;
+	font-size: 45px;
+  color: #f2f2f2;
+  text-shadow: 0 5px 5px rgba(63, 62, 63, 0.73);
+}
+
+.contenido-principal__resumen {
+	font-family: 'Chelsea Market', sans-serif;
+  font-weight: lighter;
+  font-size: 20px;
+	line-height: 30px;
+
+}
+
+.ImgAndTxt {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: -100px;
+    padding: 4rem 10rem; 
+}
+
+/* .ImgAndTxt img {
+    max-width: 40%; 
+    height: auto;
+}
+
+.ImgAndTxt h3 {
+    font-family: 'Chelsea Market';
+    font-weight: normal;
+    margin-left: 100px; 
+}*/
+
+/*slider section 2*/
+
+.wrapper{
+    max-width: 1200px; /* Ancho máximo del wrapper */
+    margin: 0 auto; /* Centra horizontalmente el wrapper */
+    position: relative;
+}
+.wrapper i{
+  top: 50%;
+  height: 44px;
+  width: 44px;
+  color: #343F4F;
+  cursor: pointer;
+  font-size: 1.15rem;
+  position: absolute;
+  text-align: center;
+  line-height: 44px;
+  background: #fff;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
+}
+.wrapper i:active{
+  transform: translateY(-50%) scale(0.9);
+}
+.wrapper i:hover{
+  background: #f2f2f2;
+}
+.wrapper i:first-child{
+  left: -22px;
+  display: none;
+}
+.wrapper i:last-child{
+  right: -22px;
+}
+.wrapper .carousel{
+  font-size: 0px;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+}
+.carousel.dragging{
+  cursor: grab;
+  scroll-behavior: auto;
+}
+.carousel.dragging img{
+  pointer-events: none;
+}
+.carousel img{
+  height: 340px;
+  object-fit: cover;
+  user-select: none;
+  margin-left: 14px;
+  width: calc(100% / 3);
+  border-radius: 18px;
+  
+}
+.carousel img:first-child{
+  margin-left: 0px;
+}
+
+@media screen and (max-width: 900px) {
+  .carousel img{
+    width: calc(100% / 2);
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .carousel img{
+    width: 100%;
+  }
+}
+/* end slider */

@@ -1,0 +1,135 @@
+/* Estilos para la ventana modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Posición fija */
+    z-index: 1; /* Se coloca delante de otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    overflow: hidden; /* Habilita el desplazamiento si es necesario */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    animation: fadeIn 0.3s ease-out; /* Animación de entrada */
+}
+
+.modal-content {
+    background-color: #fff; /* Fondo del modal */
+    margin: 10% auto; /* Centrado vertical */
+    padding: 20px;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Sombra */
+    max-width: 600px; /* Ancho máximo del modal */
+    text-align: center; /* Centrar contenido */
+    position: relative; /* Posicionamiento relativo */
+    animation: zoomIn 0.3s ease-out; /* Animación de zoom */
+}
+
+.close {
+    color: #aaa; /* Color del botón de cierre */
+    position: absolute; /* Posición absoluta */
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #333; /* Color más oscuro al pasar el mouse */
+}
+
+/* Estilos para el contenido dentro del modal */
+.modal-content h2 {
+    font-size: 2em;
+    /*color: #f39c12;  Color naranja brillante */
+    margin-bottom: 10px;
+}
+#modal1 h2 {
+    color: #f39c12;
+    
+}
+#modal2 h2 {
+    color: #5fc55f;
+    
+}
+#modal3 h2 {
+    color: #87CEEB;
+    
+}
+#modal4 h2 {
+    color: #B57EDC;
+    
+}
+#modal5 h2 {
+    color: #F88379;
+    
+}
+#modal6 h2 {
+    color: #00C5CD;
+    
+}
+
+.modal-content p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #555;
+}
+
+.modal-content a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #f39c12; /* Fondo naranja */
+    color: #fff; /* Texto blanco */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.modal-content a:hover {
+    background-color: #e74c3c; /* Color de fondo más oscuro al pasar el mouse */
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 90%;
+        margin: 15% auto;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .modal-content {
+        width: 95%;
+        margin: 25% auto;
+        padding: 10px;
+    }
+
+    .modal-content h2 {
+        font-size: 1.8em;
+    }
+
+    .modal-content p {
+        font-size: 1em;
+    }
+}

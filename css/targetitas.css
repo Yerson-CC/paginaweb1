@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+body {
+    font-family: 'Gloria Hallelujah';
+}
+
+
+.titulo-equipo {
+    color: #ec4949;
+    text-align: center;
+    margin: auto;
+    margin-top: -150px;
+    margin-bottom: 15vh;
+    
+}
+
+.targetitas {
+    margin: 0 auto;
+    margin-top: -140px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.unique-article {
+    width: 100%;
+    max-width: 400px;
+    margin: 45px;
+    position: relative;
+    counter-increment: unique-count;
+    background: linear-gradient(#F9EFAF, #F7E98D);
+    padding: 10px;
+    padding-bottom: 25px;
+    border-radius: 3px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.unique-article:hover {
+    transform: translateY(-5px) rotate(-1deg);
+    box-shadow: -3px 10px 6px rgba(0, 0, 0, 0.075);
+}
+
+.unique-article::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 15px solid;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    opacity: 0.1;
+    border-top-right-radius: 3px;
+}
+
+.unique-article::after {
+    content: "- LLXI";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    font-size: 1.25em;
+    font-weight: bold;
+    opacity: 0.6;
+    font-family: 'dancing script', cursive;
+}
+
+.unique-article .unique-h2::before {
+    content: counter(unique-count)". ";
+    font-weight: normal;
+    opacity: 0.7;
+}
+
+.unique-h1 {
+    font-size: 1.5em;
+    margin: 10px;
+    padding: 10px;
+    line-height: 1.5em;
+    clear: both;
+    width: 100%;
+}
+
+.unique-h2 {
+    line-height: 1.75em;
+    margin: 0;
+}
+
+.unique-b {
+    display: inline-block;
+    position: relative;
+    width: max-content;
+    background: white;
+    text-shadow: 0 1px black;
+}
+
+.unique-b::after,
+.unique-b::before {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: lighten;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #aaa);
+}
+
+.unique-b::after {
+    mix-blend-mode: color;
+}
+
+.unique-p {
+    margin-left: 1em;
+}
+
+.unique-stairs i {
+    display: inline-block;
+    margin-right: 0.15em;
+}
+
+.unique-stairs i:nth-of-type(2) {
+    transform: translateY(0.25em);
+}
+
+.unique-stairs i:nth-of-type(3) {
+    transform: translateY(0.5em);
+}
+
+.unique-stairs i:nth-of-type(4) {
+    transform: translateY(0.75em);
+}
+
+.unique-stairs i:nth-of-type(5) {
+    transform: translateY(1em);
+}
+
+.unique-stairs i:nth-of-type(6) {
+    transform: translateY(1.25em);
+}
+
+.unique-stairs i:nth-of-type(7) {
+    transform: translateY(1.5em);
+}
+
+.unique-hr {
+    color: inherit;
+    border: none;
+    border-top: 2px solid;
+    margin: 10px 0;
+    border-radius: 100%;
+}
+
+.unique-easy {
+    cursor: pointer;
+    background: red;
+    width: 50px;
+    height: 50px;
+    display: block;
+    color: inherit;
+    border: 2px solid;
+    border-bottom: 6px solid;
+    border-radius: 100%;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.35), 0 3px 6px inset rgba(255, 255, 255, 0.65);
+    margin: 20px auto;
+}
+
+.unique-easy:hover {
+    background: #ec4949;
+}
+
+.unique-easy:active,
+.unique-easy:focus {
+    background: darkred;
+    border-bottom-width: 2px;
+    border-top-width: 6px;
+    box-shadow: 0 0px 2px rgba(0, 0, 0, 0.25), 0 3px 5px inset rgba(0, 0, 0, 0.5);
+}
+
+
+@media (min-width: 768px) {
+    .targetitas {
+        justify-content: space-between;
+    }
+
+    .unique-article {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (min-width: 1024px) {
+    .unique-article {
+        flex: 1 1 calc(33.333% - 20px);
+    }
+}
+

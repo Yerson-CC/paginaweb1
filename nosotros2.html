@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="plugins/Cntti/popup-plugin.css">
+    <link rel="stylesheet" href="intro.css">
+    <link rel="stylesheet" href="css/sky.css">
+    <link rel="stylesheet" href="css/nosotros2.css">
+    <link rel="stylesheet" href="css/targetitas.css">
+
+    <title>Nosotros</title>
+</head>
+
+<body>
+
+    <header class="container">
+        <div class="page-header">
+            <div class="logo">
+                <a href="#">LOGO</a>
+            </div>
+            <input type="checkbox" id="click">
+
+            <label for="click" class="mainicon">
+                <div class="menu">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </label>
+            <ul>
+                <li><a href="intro.html" class="active" style="--navAni:1">INICIO</a></li>
+                <li><a href="Admiciones.html" style="--navAni:2">ADMICIONES</a></li>
+                <li><a href="nosotros2.html" style="--navAni:2">NOSOTROS</a></li>
+                <li><a href="Programas.html" style="--navAni:3">PROGRAMAS</a></li>
+                <li><a href="Actividades.html" style="--navAni:4">ACTIVIDADES</a></li>
+                <li><a href="#container4" style="--navAni:5">CONTACTO</a></li>
+                <li><a href="Galery.html" style="--navAni:5">GALERIA</a></li>
+            </ul>
+        </div>
+    </header>
+    <svg height="100%" width="100%">
+        <defs>
+            <linearGradient id="grad" x1="0" x2="0" y1="0" y2="1">
+                <stop offset="0%" stop-color="skyblue" stop-opacity="1" />
+                <stop offset="70%" stop-color="skyblue" stop-opacity="0.3" />
+                <stop offset="100%" stop-color="skyblue" stop-opacity="0" />
+            </linearGradient>
+            <filter id="sky">
+                <feTurbulence baseFrequency="0.003 0.005" numOctaves="10" />
+                <feColorMatrix type="hueRotate" values="0">
+                    <animate attributeName="values" from="0" to="360" dur="30s" repeatCount="indefinite" />
+                </feColorMatrix>
+                <feColorMatrix
+                    values="4.2 -4.6 3.1 -1.4 4.8 -0.8 -0.8 -1.9 2.7 4.4 0.8 -3.6 4.1 1.9 4.3 -3.4 0.1 1.7 3.5 -2.1" />
+                <feComposite operator="in" in2="SourceGraphic" />
+            </filter>
+        </defs>
+        <rect height="100%" width="100%" fill="url(#grad)" />
+        <rect height="100%" width="100%" filter="url(#sky)" />
+    </svg>
+    <section class="history">
+        <article>
+            <h2>ORACIÓN</h2>
+            <p>Gracias por concederme la vocación a la enseñanza, por compartir conmigo un poco de tu conocimiento, y
+                así ejercer con amor y paciencia.
+            </p>
+
+            <figure>
+                <div>
+                    <img class="develop-photo"
+                        src="https://media.istockphoto.com/id/611096340/es/vector/estudiante-que-va-a-casa-de-la-escuela.jpg?s=612x612&w=0&k=20&c=WeGw2OHs8RAJuTPBrjCEzTBRPDEfUZGoCv1rbuR3m2k="
+                        alt="A pink flamingo floater toy floating on ocean water. "
+                        title="Photo by Vicko Mozara for Unsplash">
+                </div>
+                <figcaption>The infamous inflatable flamingo!</figcaption>
+            </figure>
+
+            <p>Ahora te pido ayuda para tener aguante, ante sus dudas que puedan tener, sus faltas, tropiezos en camino
+                por alcanzar sus sueños.</p>
+
+            <p>Ayúdame a compartir sus alegrías, a comprender sus inquietudes, y a calmar sus tristezas. </p>
+
+            <figure>
+                <div>
+                    <img class="develop-photo"
+                        src="https://img.freepik.com/vector-premium/ninos-lindos-jugando-dibujos-animados-parque_18591-23680.jpg"
+                        alt="A person surfing in dark blue water. In the background, there is a brown stony cliff. "
+                        title="Photo by Harrison Fitts for Unsplash">
+                </div>
+                <figcaption>Kev rippin' it @ Crystal Cliffs</figcaption>
+            </figure>
+
+            <p>Instrúyeme para poder guiar a mis alumnos hacia la construcción de justicia, de integridad, de hermandad,
+                del perdón y que actúen con la verdad.
+                Permíteme enseñar y compartir la fe y esperanza, a que perseveren y consigan, sus metas que se han
+                propuesto.
+            </p>
+
+            <p>Alienta a su corazón con tu luz para que decidan caminar junto a ti, y actúen al bien de los demás.
+                Amén
+            </p>
+        </article>
+
+    </section>
+
+
+
+    <div class="titulo-equipo">
+        <h2><span></span>NUESTRO EQUIPO<span></span></h2>
+    </div>
+
+    <section class="targetitas">
+
+        <article class="unique-article">
+            <h2 class="unique-h2">Nombre</h2>
+            <hr class="unique-hr">
+            <p class="unique-p">I think, therefore I think,<br>
+                therefore I think, and think, and think...</p>
+            <p class="unique-p">I think myself in circles,<br>
+                I think myself in squares<br>
+                My thoughts blind me as I walk<br>
+                so I don't notice the <span
+                    class="unique-stairs"><i>s</i><i>t</i><i>a</i><i>i</i><i>r</i><i>s</i><i>.</i></span></p>
+        </article>
+
+        <article class="unique-article" style="filter: hue-rotate(180deg)">
+            <h2 class="unique-h2">Nombre</h2>
+            <hr class="unique-hr">
+            <p class="unique-p">I’m going on a trip<br>
+                Don’t know where or for how long<br>
+                If on a plane or train or ship<br>
+                But staying here feels wrong</p>
+            <p class="unique-p">I need to get away<br>
+                To run, escape, and scram<br>
+                But no matter where I stay<br>
+                That’s already where I am</p>
+        </article>
+
+        <article class="unique-article" style="filter: hue-rotate(-90deg)">
+            <h2 class="unique-h2">Nombre</h2>
+            <hr class="unique-hr">
+            <p class="unique-p">I wish the way I am could be<br>
+                A different sort of way<br>
+                I think about how things should be<br>
+                If I was just okay</p>
+            <p class="unique-p">I wonder if my life would be<br>
+                Easier each day<br>
+                If the way I am could be<br>
+                A different sort of way</p>
+        </article>
+
+        <article class="unique-article" style="background: white;">
+            <h2 class="unique-h2"><b class="unique-b">Nombre</b></h2>
+            <hr class="unique-hr">
+            <p class="unique-p">Some people call me <b class="unique-b" style="color: purple">Purple</b><br>
+                Even when I'm <b class="unique-b" style="color: blue;">Blue</b><br>
+                Sometimes I feel <b class="unique-b" style="color: goldenrod;">Yellow</b>,<br>
+                when I don't know what to do.</p>
+            <p class="unique-p">Sometimes, when things don't go the way<br>
+                I want, then I turn <b class="unique-b" style="color: red;">Red</b>,<br>
+                Usually the colors all turn<br>
+                <b class="unique-b" style="color: #444;">Grey</b> inside my head.
+            </p>
+        </article>
+
+        <article class="unique-article">
+            <h2 class="unique-h2">Nombre</h2>
+            <hr class="unique-hr">
+            <p class="unique-p">I wish I had a button that could change the way I think<br>
+                I could press it when my thoughts begin to drag me to the brink<br>
+                I wouldn't need to stew in fear and slowly downward sink<br>
+                If I had a button that could change the way I think</p>
+            <button class="unique-easy"></button>
+        </article>
+
+        <article class="unique-article" style="filter: hue-rotate(40deg)">
+            <h2 class="unique-h2"> Nombre </h2>
+            <hr class="unique-hr">
+            <p class="unique-p">There's a worm inside my brain<br>
+                It knows not what it does<br>
+                It nibbles my amygdala<br>
+                It hums atonal as it goes</p>
+            <p class="unique-p">There's a worm inside my brain<br>
+                How I wish that it would leave<br>
+                It tickles my temporal lobe<br>
+                It's replaced a part of me</p>
+            <p class="unique-p">There's a worm inside my brain<br>
+                I think he thinks that he's my friend<br>
+                He likes to talk a lot<br>
+                I wish the talking would just end</p>
+        </article>
+    </section>
+
+    <section id="container4">
+        <div class="textoCont">
+            <h2><span>¿DÓNDE NOS PUEDES ENCONTRAR?</span></h2>
+        </div>
+
+        <div class="contact-map">
+            <div class="contact-info">
+                <h3>Información de contacto</h3>
+                <p>Dirección: Calle Principal, Ciudad, País</p>
+                <p>Teléfono: +123456789</p>
+                <p>Email: info@example.com</p>
+            </div>
+
+            <div class="map">
+                <!-- Aquí puedes insertar el código de tu mapa, por ejemplo, usando Google Maps -->
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387345.6595186358!2d-74.25986439270083!3d40.69714942280318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1648148627413!5m2!1sen!2s"
+                    width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="footertext">
+            <p>&copy; 2024 Institución Educativa Inicial. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+
+    <script src="js/hs.js"></script>
+    <script src="js/scrollheader.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/card-slider-hst.js"></script>
+
+
+    <script>
+
+
+    </script>
+
+</body>
+
+</html>

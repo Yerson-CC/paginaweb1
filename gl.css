@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+body {
+    background-color: #ecf4fb; /* Cambiado a un tono más claro de azul */
+    margin: 0;
+    font-family: 'Shantell Sans', sans-serif;
+}
+
+h2 {
+    text-align: center;
+    position: relative;
+    width: 80%;
+    margin: 50px auto;
+    font-family: 'Chelsea Market', cursive;
+    color: #333; /* Color de texto ajustado */
+}
+
+
+
+h2 span {
+    background-color: #f0f6fc; /* Color de fondo ajustado */
+    padding: 0 15px;
+    font-weight: lighter;
+}
+
+.img-gallery {
+    width: 90%; /* Aumentado el ancho para que se vea más espaciado */
+    max-width: 1200px; /* Máximo ancho para mantener la galería centrada */
+    margin: 50px auto;
+    padding: 50px;
+    border: 2px solid #ddd; /* Borde añadido para organización */
+    border-radius: 10px; /* Borde redondeado */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    animation: fadeInAp 0.9s ease-out forwards;
+}
+
+.img-gallery img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img-gallery img:hover {
+    transform: scale(1.1); /* Escalado ligeramente reducido */
+    box-shadow: 0 12px 15px rgba(0, 0, 0, 0.15); /* Sombra más intensa al hacer hover */
+}
+
+.ful-img {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s ease-out; /* Animación de entrada */
+    z-index: 99;
+}
+
+.ful-img i {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.ful-img img {
+    width: 90%;
+    max-width: 800px;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .img-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    h2 {
+        text-decoration: underline;
+    }
+    h2::before {
+        display: none;
+    }
+    h2 span {
+        padding: 0;
+    }
+    .img-gallery {
+        width: 95%;
+        gap: 15px;
+    }
+    .ful-img img {
+        width: 95%;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInAp {
+	0% {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+    
+.textoCont h2 {
+    font-size: 30px;
+    padding: 8px;
+}
